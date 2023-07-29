@@ -43,11 +43,6 @@ def index():
 @app.route('/')
 def clear():
     title="Welcome"
-    file = 'Book2.xlsx'
-    location = "/"
-    path = os.path.join(location, file)  
-    os.remove(path)
-    print ("The file has been removed")
     return render_template("index.html",title_favicon=title)
     
 
@@ -77,7 +72,7 @@ def view():
     description
     link
     """
-    cc = ['shsmodernhill@shb.sch.id','sugeng.riyanto@shb.sch.id']
+    
     all_Subject=email_list['Subject']
     all_Grade=email_list['Grade']
     all_virtual_account=email_list['virtual_account']
