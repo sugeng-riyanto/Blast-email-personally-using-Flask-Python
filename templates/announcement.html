@@ -1,0 +1,70 @@
+{% extends 'base.html' %}
+
+{% block main %}
+
+
+    <!-- ======= About Section ======= -->
+    <section id="upload" class="about">
+      <div class="container">
+
+        <div class="section-title">
+ <h2>Announcement (Maximum is 100 emails/sending)</h2>
+          <p>Upload file berekstensi (.xlsx)</p>
+          
+          
+          <div class="container mb-3">
+            
+              <form action="{{ url_for('pengumuman') }}" method="POST" enctype="multipart/form-data">
+                <div class="mb-3">
+                  <input class="form-control" type="file" name="file"
+                  accept="application/vnd.openxmlformats-officedocument.spreadsheetml.sheet, application/vnd.ms-excel">
+                
+                </div>
+                <div class="mb3">
+                  <input class="btn btn-success"type="submit" value="Upload and send">
+              
+                </div>
+                </form>
+            </div>
+            
+              <div class="container">
+              <br>
+              <br>
+              <h6>Show .xlsx file in html</h6>
+              {{ data_var1|safe }}
+              
+              {% for message in get_flashed_messages() %}
+              <h6 style="background-color: powderblue;font-family: verdana;font-weight: bold;">{{ message }}</h6>
+              
+              {% endfor %}
+            </div>
+            
+            
+
+        
+
+      </div>
+      <div class="container mb-3">
+            
+        <form action="{{ url_for('clear') }}" method="post" enctype="multipart/form-data">
+              
+          <div class="mb3">
+              <a href="{{ url_for('clear') }}" class="btn btn-warning">Clear/Reset</a>
+          </div>
+        </form>
+      </div>
+    
+      <div class="container mb-3">
+            
+        <form action="{{ url_for('clear') }}" method="post" enctype="multipart/form-data">
+              
+          <div class="mb3">
+              <a href="https://docs.google.com/spreadsheets/d/1-EE1bw7asLqxIN1Rk0d86awr9sB47x-C/edit?usp=sharing&ouid=116450174371015222246&rtpof=true&sd=true" target="_blank" class="btn btn-primary">Template xlsx</a>
+          </div>
+        </form>
+      </div>
+    </section><!-- End About Section -->
+
+
+
+    {% endblock %}

@@ -1,0 +1,116 @@
+{% extends 'base.html' %}
+
+{% block main %}
+  <!-- ======= Hero Section ======= -->
+  <section id="hero" class="d-flex flex-column justify-content-center align-items-center">
+    <div class="hero-container" data-aos="fade-in">
+      <h1>Welcome</h1>
+      <p>in Sekolah Harapan Bangsa, <span class="typed" data-typed-items=" Knowledge Faith and Characters, Modernhill"></span></p>
+    </div>
+  </section><!-- End Hero -->
+
+<div class="container">
+  <div class="row">
+    <div class="col">
+      <section>
+<div class="card" style="width: 18rem;">
+ 
+  <img src="{{url_for('static',filename='assets/img/calendar.png')}}" class="card-img-top" alt="calendar">
+  <div class="card-body">
+    <h5 class="card-title">Monthly, CCA and Annual Fee</h5>
+    <p class="card-text">Menu Upload for Monthly, CCA and Annual Fee</p>
+    <a href="{{ url_for('invoice') }}" class="btn btn-primary">Monthly, CCA and Annual Fee</a>
+  </div>
+</div>
+</section>
+    </div>
+    <div class="col">
+     <section>
+<div class="card" style="width: 18rem;">
+ 
+  <img src="{{url_for('static',filename='assets/img/reminder.png')}}" class="card-img-top" alt="reminder">
+  <div class="card-body">
+    <h5 class="card-title">RE1, RE 2 AND RE3</h5>
+    <p class="card-text">Menu Upload for Payment Late (RE1, RE2 atau RE3)</p>
+    <a href="{{ url_for('reminder') }}" class="btn btn-primary">RE1, RE 2 AND RE3</a>
+  </div>
+</div>
+</section>
+          <div class="col">
+     <section>
+<div class="card" style="width: 18rem;">
+ 
+  <img src="{{url_for('static',filename='assets/img/receipt.gif')}}" class="card-img-top" alt="reminder">
+  <div class="card-body">
+    <h5 class="card-title">Invoice or Receipt</h5>
+    <p class="card-text">Menu Upload for Payment Late (RE1, RE2 atau RE3)</p>
+    <a href="{{ url_for('buktibayar') }}" class="btn btn-primary">Invoice or Receipt</a>
+  </div>
+</div>
+</section>
+    </div>
+  </div>
+    <!-- ======= Template Section ======= -->
+    <section id="template" class="portfolio section-bg">
+      <div class="container">
+
+        <div class="section-title">
+          <h2>Template (.xlsx)</h2>
+
+        </div>
+        <div class="container">
+        <iframe src="https://drive.google.com/embeddedfolderview?id=1pezNMypprMA9KspAC6EK-_TQ0IHJGAdx#list" style="width:100%; height:480px; border:0;background: #4a4747;"></iframe>
+      </div>
+      </div>
+    </section><!-- End Portfolio Section -->
+    <!-- ======= Template Section ======= -->
+    <section id="link" class="portfolio section-bg">
+      <div class="container">
+
+        <div class="section-title">
+          <h2>Attachment File</h2>
+          <br>
+          <script>
+function openWin() {
+  window.open("https://drive.google.com/drive/folders/1bg3DLLlFK3TTVj3Al1RVOjFTPllQdxd1?usp=sharing");
+}
+</script>
+
+
+        </div>
+        <div class="container">
+           <form>
+             <input type="button" value="Open Folder Google Drive" onclick="openWin()">
+           </form>
+        </div>
+        <br><br><br>
+        <div class="container">
+        <iframe src="https://drive.google.com/embeddedfolderview?id=1bg3DLLlFK3TTVj3Al1RVOjFTPllQdxd1#list" style="width:100%; height:480px; border:0;background: #4a4747;"></iframe>
+      </div>
+      </div>
+    </section><!-- End Portfolio Section background: #4a4747;-->
+
+   <!-- ======= Tutorial Section ======= -->
+   <section id="tutorial" class="portfolio section-bg">
+    <div class="container">
+
+      <div class="section-title">
+        <h2>Tutorial</h2>
+        <!--https://www.embedista.com/embed-youtube-video-->
+       </div>
+      <div class="container text-center">
+  <div class="row align-items-start">
+    <div class="col">
+      <iframe width="540" height="400" src="https://www.youtube.com/embed/u3ABii1BqJs" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+    </div>
+       <div class="col">
+       <iframe src="https://drive.google.com/file/d/1FouRJUKyjGAdMOYOHUtniXGWl2fO6KLr/preview" width="540" height="400" allow="autoplay"></iframe>
+         <br>
+         <br>
+    </div>
+  </div>
+  <div
+  </div>
+  </section><!-- End Portfolio Section -->
+
+    {% endblock %}

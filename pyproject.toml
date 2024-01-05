@@ -1,0 +1,23 @@
+[tool.poetry]
+name = "repl_nix_Blast-email-personally-using-Flask-Python"
+version = "0.1.0"
+description = ""
+authors = ["Your Name <you@example.com>"]
+
+[tool.poetry.dependencies]
+python = "^3.10"
+Flask = "^2.3.2"
+ipython = "^8.14.0"
+openpyxl = "^3.1.2"
+pandas = "^2.0.3"
+Werkzeug = "^2.3.6"
+prettytable = "^3.8.0"
+simple-colors = "^0.1.5"
+Flask-Compress = "^1.14"
+gevent = "^23.9.1"
+
+[tool.poetry.dev-dependencies]
+
+[build-system]
+requires = ["poetry-core>=1.0.0"]
+build-backend = "poetry.core.masonry.api"

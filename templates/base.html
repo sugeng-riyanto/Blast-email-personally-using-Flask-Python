@@ -34,6 +34,19 @@
   * Author: BootstrapMade.com
   * License: https://bootstrapmade.com/license/
   ======================================================== -->
+   <!-- Script to print the content of a div -->
+    <script>
+        function printDiv() {
+            var divContents = document.getElementById("GFG").innerHTML;
+            var a = window.open('', '', 'height=400, width=300');
+            a.document.write('<html>');
+            a.document.write('<body > <h1>Hasil Pengiriman invoice <br>');
+            a.document.write(divContents);
+            a.document.write('</body></html>');
+            a.document.close();
+            a.print();
+        }
+    </script>
 </head>
 
 <body>
@@ -53,43 +66,40 @@
 
       <nav id="navbar" class="nav-menu navbar">
         <ul>
-          <li><a href="#hero" class="nav-link scrollto active"><i class="bx bx-home"></i> <span>Home</span></a></li>
-          <li><a href="#upload" class="nav-link scrollto"><i class="bx bx-user"></i> <span>Upload</span></a></li>
-          <li><a href="#template" class="nav-link scrollto"><i class="bx bx-book-content"></i> <span>Template</span></a></li>
-          <li><a href="#tutorial" class="nav-link scrollto"><i class="bi bi-youtube"></i> <span>Tutorial</span></a></li>
+         
+          <li><a href="{{ url_for('clear') }}" class="nav-link scrollto active"><i class="bx bx-home"></i> <span>Home</span></a></li>
+          <li><a href="{{ url_for('invoice') }}" class="nav-link scrollto"><i class="bi bi-file-earmark-arrow-up"></i> <span>Monthly, CCA, Annual Fee</span></a></li>
+          <li><a href="{{ url_for('reminder') }}" class="nav-link scrollto"><i class="bi bi-credit-card"></i> <span>Payment Late Warning</span></a></li>
+           <li><a href="{{ url_for('buktibayar') }}" class="nav-link scrollto"><i class="bi bi-receipt"></i> <span>Receipt or Invoice</span></a></li>
+          <li><a href="{{ url_for('announcement') }}" class="nav-link scrollto"><i class="bi bi-receipt"></i> <span>Announcement</span></a></li>
+          <li><a href="{{ url_for('clear') }}" class="nav-link scrollto"><i class="bx bx-book-content"></i> <span>Template</span></a></li>
+          <li><a href="{{ url_for('clear') }}" class="nav-link scrollto"><i class="bi bi-paperclip"></i> <span>Attachment</span></a></li>
+          <li><a href="{{ url_for('clear') }}" class="nav-link scrollto"><i class="bi bi-youtube"></i> <span>Tutorial</span></a></li>
 
         </ul>
       </nav><!-- .nav-menu -->
     </div>
+   
   </header><!-- End Header -->
 
-  <!-- ======= Hero Section ======= -->
-  <section id="hero" class="d-flex flex-column justify-content-center align-items-center">
-    <div class="hero-container" data-aos="fade-in">
-      <h1>Welcome</h1>
-      <p>in Sekolah Harapan Bangsa, <span class="typed" data-typed-items=" Knowledge Faith and Characters, Modernhill"></span></p>
-    </div>
-  </section><!-- End Hero -->
+
 
   <main id="main">
     {% block main %}
 
     {% endblock %}
 
+  <!-- ======= Template Section ======= -->
   </main><!-- End #main -->
 
   <!-- ======= Footer ======= -->
   <footer id="footer">
     <div class="container">
       <div class="copyright">
-        {{ version }}&copy;Copyright <strong><span>iPortfolio</span></strong>
+        {{ version }}&copy;Copyright
       </div>
       <div class="credits">
-        <!-- All the links in the footer should remain intact. -->
-        <!-- You can delete the links only if you purchased the pro version. -->
-        <!-- Licensing information: https://bootstrapmade.com/license/ -->
-        <!-- Purchase the pro version with working PHP/AJAX contact form: https://bootstrapmade.com/iportfolio-bootstrap-portfolio-websites-template/ -->
-        <!--Designed by <a href="https://bootstrapmade.com/">BootstrapMade</a>-->
+       
         Created with <i class="bi bi-heart-fill text-danger"></i> by <a href="https://github.com/sugeng-riyanto" target="_blank"class="text-white fw-bold">Sugeng Riyanto <i class="bi bi-github></i></a>
       </div>
     </div>
